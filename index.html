@@ -19,23 +19,23 @@
             <p class="h2">Registration Form</p>
 
             <form action="./src/register.php" method="post">
-                <label for="floatingInput">First Name :</label>
+                <label for="floatingInput" class="my-txt">First Name :</label>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="firstname" id="firstname" required>
 
-                <label for="floatingInput">Last Name :</label>
+                <label for="floatingInput" class="my-txt">Last Name :</label>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="lastname" id="lastname" required>
 
-                <label for="floatingInput">Mobile No. :</label>
+                <label for="floatingInput" class="my-txt">Mobile No. :</label>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="mobileno" id="number" required>
 
-                <label for="floatingInput">Email :</label>
+                <label for="floatingInput" class="my-txt">Email :</label>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="email" id="email" required>
 
-                <label for="floatingInput">Password :</label>
+                <label for="floatingInput" class="my-txt">Password :</label>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="password" id="password" required>
 
@@ -63,6 +63,10 @@
         .h2 {
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        .my-txt {
+            font-weight: bold;
         }
 
         .my-btn {
