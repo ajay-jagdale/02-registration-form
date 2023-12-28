@@ -2,72 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-body">
-            <p class="h2">Registration Form</p>
+  <div class="card">
+    <div class="card-body">
+      <p class="h2">Registration Form</p>
 
-            <form action="./src/register.php" method="post">
-                <label for="floatingInput">First Name :</label>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg" name="firstname" id="firstname" required>
+      <form action="./src/register.php" method="post">
+        <label for="floatingInput">First Name :</label>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="firstname" id="firstname" required>
 
-                <label for="floatingInput">Last Name :</label>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg" name="lastname" id="lastname" required>
+        <label for="floatingInput">Last Name :</label>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="lastname" id="lastname" required>
 
-                <label for="floatingInput">Mobile No. :</label>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg" name="mobileno" id="number" required>
+        <label for="floatingInput">Mobile No. :</label>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="mobileno" id="number" required>
 
-                <label for="floatingInput">Email :</label>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg" name="email" id="email" required>
+        <label for="floatingInput">Email :</label>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="email" id="email" required>
 
-                <label for="floatingInput">Password :</label>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-lg" name="password" id="password" required>
+        <label for="floatingInput">Password :</label>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="password" id="password" required>
 
-                <button type="submit" class="btn btn-primary" name="register">Register</button>
-            </form>
+        <div class="my-btn">
+          <button type="submit" class="btn btn-primary" name="register">Register</button>
         </div>
+      </form>
     </div>
+  </div>
 
 </body>
 
-
-
 <head>
-    <style>
-        .card {
-            margin-left: 130px;
-            margin-right: 130px;
-            margin-top: 60px;
-            border: 0px;
-            box-shadow: 0 0 10px #ffffff;
-        }
+  <style>
+    .card {
+      margin-left: 130px;
+      margin-right: 130px;
+      margin-top: 60px;
+      box-shadow: 0 0 10px gray;
+    }
 
-        .h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    .h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        .btn {
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
+    .my-btn {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .form-control {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 </html>
