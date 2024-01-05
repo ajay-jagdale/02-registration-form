@@ -1,10 +1,10 @@
 
 <?php
 // Create a database connection
-$servername = "sql113.byetcluster.com";   // localhost
-$username = "if0_34660512";   // root
-$password = "K3ldF65S3C0i";   // Enter your password here
-$dbname = "if0_34660512_02_php_reg_form";    // my_db
+$servername = "localhost";
+$username = "root";
+$password = "";   // Enter your password here
+$dbname = "my_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
