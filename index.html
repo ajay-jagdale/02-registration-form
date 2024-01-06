@@ -84,6 +84,9 @@
         registrationForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
+            const firstname = document.getElementById('firstname').value;
+            const lastname = document.getElementById('lastname').value;
+            const number = document.getElementById('number').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
@@ -96,7 +99,11 @@
 
                     // Save additional user data to the Firebase Realtime Database
                     firebase.database().ref('users/' + userId).set({
-                        email: email
+                        firstname: firstname,
+                        lastname: lastname,
+                        number: number,
+                        email: email,
+                        password: password
                         // Add more fields as needed
                     });
 
