@@ -18,8 +18,7 @@
         <div class="card-body">
             <p class="h2">Registration Form</p>
 
-            <!-- <form action="./src/register.php" method="post"> -->
-            <form id="registrationForm">
+            <form action="./src/register.php" method="post">
                 <label for="floatingInput" class="my-txt">First Name :</label>
                 <input type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="firstname" id="firstname" required>
@@ -33,7 +32,7 @@
                     aria-describedby="inputGroup-sizing-lg" name="mobileno" id="number" required>
 
                 <label for="floatingInput" class="my-txt">Email :</label>
-                <input type="email" class="form-control" aria-label="Sizing example input"
+                <input type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="email" id="email" required>
 
                 <label for="floatingInput" class="my-txt">Password :</label>
@@ -46,75 +45,6 @@
             </form>
         </div>
     </div>
-
-
-
-    <!-- Firebase -->
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyAVUy8SODXOPoWXvzn1pH7cSFZSa_Aq8Tk",
-            authDomain: "web-development-6e213.firebaseapp.com",
-            databaseURL: "https://web-development-6e213-default-rtdb.firebaseio.com",
-            projectId: "web-development-6e213",
-            storageBucket: "web-development-6e213.appspot.com",
-            messagingSenderId: "889000392529",
-            appId: "1:889000392529:web:13c3012ba0d53e6700c570",
-            measurementId: "G-GSG1CJ366G"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
-
-
-
-
-    <script>
-        const registrationForm = document.getElementById('registrationForm');
-
-        registrationForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const firstname = document.getElementById('firstname').value;
-            const lastname = document.getElementById('lastname').value;
-            const number = document.getElementById('number').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            // Create a new user with email and password
-            firebase.auth().createUserWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    // User registered successfully
-                    const user = userCredential.user;
-                    const userId = user.uid;
-
-                    // Save additional user data to the Firebase Realtime Database
-                    firebase.database().ref('users/' + userId).set({
-                        firstname: firstname,
-                        lastname: lastname,
-                        number: number,
-                        email: email,
-                        password: password
-                        // Add more fields as needed
-                    });
-
-                    console.log('User registered:', user);
-                })
-                .catch((error) => {
-                    console.error('Registration failed:', error.message);
-                });
-        });
-    </script>
-
 </body>
 
 
